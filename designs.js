@@ -1,17 +1,18 @@
-// Select color input
+
 var color = document.getElementById('colorPicker')
-// Select size input
+// Select color input
+
 var grid = document.getElementById('pixelCanvas')
 var size = document.getElementById('sizePicker')
 var gridheight = document.getElementById('inputHeight')
 var gridwidth = document.getElementById('inputWidth')
-
-// When size is submitted by the user, call makeGrid()
+// Select size input
 
 size.addEventListener('submit', function(event) {
     event.preventDefault();
     makeGrid(gridheight.value, gridwidth.value);
 })
+// When size is submitted by the user, call makeGrid()
 
 function makeGrid(gridheight, gridwidth) {
 grid.innerHTML = "";
@@ -25,4 +26,5 @@ for (let i = 0; i < gridheight; i++) {
     }
 }
 }
+// Defined makeGrid function. Removes old grid then draws new grid and colors each cell based on selected color
 
